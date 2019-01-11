@@ -12,9 +12,9 @@ app.use('/assets', express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
 
-setupController(app);
-
 apiController(app);
+
+setupController(app);
 
 mongoose.connect(config.getDbConnection(), { useNewUrlParser: true });
 
